@@ -1,0 +1,16 @@
+<h1>Menulog</h1>
+
+<% @restaurants.each do |restaurant| %>
+<div class="panel">
+  <div class="panel-header">
+    <h3><%= restaurant.name %></h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      <%= restaurant.description %>
+    </p>
+
+      <%= link_to restaurant.name, restaurant_path(restaurant), class: 'btn btn-info' %>
+  </div>
+</div>
+<% end %>
